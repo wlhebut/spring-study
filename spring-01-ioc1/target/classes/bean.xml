@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.ta.pojo.Student">
+        <property name="name" value="dd" />
+    </bean>
+    <bean id="student2" class="com.ta.pojo.Student">
+        <property name="name" value="dd2" />
+    </bean>
+
+    <bean id="hello" class="com.ta.pojo.Hello">
+
+        <property name="str" value="spring"/>
+
+        <property name="list">
+            <list>
+                <value>a list element follow by a reference</value>
+                <value>demo2</value>
+            </list>
+        </property>
+
+        <property name="students">
+            <list>
+                <ref bean="student"></ref>
+                <ref bean="student2"></ref>
+            </list>
+        </property>
+
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+
+</beans>
